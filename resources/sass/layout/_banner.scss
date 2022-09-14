@@ -1,0 +1,29 @@
+.banner{
+    position: absolute;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 100%;
+    z-index: 1;
+    color: map-get($theme-colors, 'white');
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.banner::before{
+    content: '';
+    position: absolute;
+    width: 342px;
+    height: 500px;
+    left: 0;
+    bottom: 0;
+    background: url("../images/banner.png") no-repeat;
+}
+
+.banner::after{
+    content: '';
+    position: absolute;
+    width: 176px;
+    height: 296px;
+    bottom: 0;
+    right: 0;
+    background: url("../images/banner-1.png") no-repeat;
+}

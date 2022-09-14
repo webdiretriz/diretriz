@@ -1,0 +1,31 @@
+.header{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid map-get($theme-colors, 'gray');
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Oswald', sans-serif !important;
+
+    .links{
+        display: flex;
+        list-style: none;
+        text-transform: uppercase;
+
+        a{
+            color: map-get($theme-colors, 'white');
+            text-decoration: none;
+            margin-right: 2rem;
+        }
+
+        a.active{
+            color: map-get($theme-colors, 'success');
+        }
+    }
+
+    .info{
+        border-left: 1px solid map-get($theme-colors, 'gray');
+        height: 100%;
+    }
+}

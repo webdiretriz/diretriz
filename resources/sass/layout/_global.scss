@@ -1,0 +1,45 @@
+.initial{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden !important;
+
+    .initial-bg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+        transform: scale(1);
+        animation: pulse 13s infinite;
+        animation-timing-function: linear;
+    }
+}
+
+.title-section{
+    font-family: 'Oswald', sans-serif !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+body::-webkit-scrollbar {
+    background: map-get($theme-colors, 'primary');
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: map-get($theme-colors, 'success');
+    border-radius: 5px;
+}
