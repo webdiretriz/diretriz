@@ -1,5 +1,5 @@
 @section('service')
-    <section class="w-100 bg-primary">
+    <section class="w-100 bg-white">
         <div class="container p-5 service">
             <div class="w-100">
                 <h1 class="title-section">Explore nossos serviços de software</h1>
@@ -32,4 +32,7 @@
             </div>
         </div>
     </section>
+    <div class="w-100 bg-success d-flex justify-content-center flex-column align-items-center">
+        <img src="{{url(mix('images/senior.png'))}}" alt="Senior">
+    </div>
 @endsection

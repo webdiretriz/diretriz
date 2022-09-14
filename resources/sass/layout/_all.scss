@@ -1,0 +1,78 @@
+.service {
+    display: flex;
+    justify-content: space-between;
+    color: map-get($theme-colors, 'light');
+
+    h1 {
+        font-size: 2.8em;
+        color: map-get($theme-colors, 'primary');
+    }
+
+    .single {
+        display: flex;
+        align-items: center;
+        width: 50%;
+
+        img {
+            width: 100px;
+            background: #282828;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        h2 {
+            font-size: 1.7em;
+            color: map-get($theme-colors, 'white');
+        }
+    }
+}
+
+.client{
+    position: relative;
+
+    .single {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 191px;
+        width: 200px;
+        border: 1px solid #2a2a2a;
+        border-right: none;
+        border-top: none;
+
+        img{
+            transition: .5s;
+            filter: grayscale(1);
+        }
+    }
+
+    .single:hover {
+        img{
+            transition: .5s;
+            filter: grayscale(0);
+        }
+    }
+
+    .single:last-of-type{
+        border-right: 1px solid #2a2a2a;
+    }
+
+    .single:nth-child(-n+3){
+        border-top: 1px solid #2a2a2a;
+    }
+
+    .single:nth-child(3n+3){
+        border-right: 1px solid #2a2a2a;
+    }
+}
+
+.client:before{
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    background: url("../images/segment.png") no-repeat;
+    background-size: 100% 100%;
+}

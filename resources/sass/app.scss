@@ -14,7 +14,7 @@ $theme-colors: (
     "danger": #FF7D53,
     "warning": #FFDA20,
     "gray": #545454,
-    "light": #7c7c7c,
+    "light": #232323,
     "white": #fff
 );
 
@@ -26,4 +26,4 @@ $theme-colors: (
 @import "layout/global";
 @import "layout/header";
 @import "layout/banner";
-@import "layout/service";
+@import "layout/all";
