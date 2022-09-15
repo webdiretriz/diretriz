@@ -13,6 +13,11 @@
                 <x-news image="https://www.tce.mg.gov.br/ImagemDestaque/1111624903.jpg"
                         title="Comunicado SISOP-MG N. 01/2020"/>
             </div>
+            <div class="w-100 d-flex justify-content-center mt-5">
+                <div class="link">
+                    <p>Para ver mais notícias e artigos <a class="text-success" href="#">clique aqui</a></p>
+                </div>
+            </div>
         </div>
     </section>
 @endsection

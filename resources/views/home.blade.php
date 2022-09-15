@@ -20,6 +20,7 @@
 @include('home.service')
 @include('home.client')
 @include('home.news')
+@include('home.contact')
 
 
 <body>
@@ -31,7 +32,7 @@
 @yield('service')
 @yield('client')
 @yield('news')
-
+@yield('contact')
 
 <script src="{{ url(mix('js/libary.min.js')) }}"></script>
 <script src="{{ url(mix('js/script.min.js')) }}"></script>
