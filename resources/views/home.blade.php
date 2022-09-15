@@ -19,6 +19,7 @@
 @include('home.banner')
 @include('home.service')
 @include('home.client')
+@include('home.news')
 
 
 <body>
@@ -29,6 +30,7 @@
 </div>
 @yield('service')
 @yield('client')
+@yield('news')
 
 
 <script src="{{ url(mix('js/libary.min.js')) }}"></script>

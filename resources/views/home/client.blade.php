@@ -1,5 +1,5 @@
 @section('client')
-    <article class="client" style="background: #1C1E22">
+    <section class="client" style="background: #1C1E22">
         <div class="container py-5">
             <h1 class='title-section text-white fs-3'>Temos a confiança de mais de 5.000 clientes satisfeitos em todo o
                 Brasil!</h1>
@@ -21,5 +21,5 @@
                 </div>
             </div>
         </div>
-    </article>
+    </section>
 @endsection
