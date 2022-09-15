@@ -36,6 +36,10 @@
 @yield('contact')
 @yield('footer')
 
+<div class="backTop d-none animate__animated">
+    <i class="bi bi-chevron-double-up fs-2 text-success"></i>
+</div>
+
 <script src="{{ url(mix('js/libary.min.js')) }}"></script>
 <script src="{{ url(mix('js/script.min.js')) }}"></script>
 <script src="https://kit.fontawesome.com/ada19db140.js" crossorigin="anonymous"></script>

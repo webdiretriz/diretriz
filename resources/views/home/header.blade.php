@@ -9,8 +9,8 @@
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">Soluções</a></li>
                 <li><a href="#">Área do Cliente</a></li>
-                <li><a href="#">Notícias</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#news">Notícias</a></li>
+                <li><a href="#contact">Contato</a></li>
                 <li><a href="#">A Diretriz</a></li>
             </ul>
             <div class="info py-3 px-4 d-flex align-items-center">

@@ -26,6 +26,20 @@
     border: 2px dashed map-get($theme-colors, 'gray');
 }
 
+.backTop{
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background: map-get($theme-colors, 'primary');
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
 @keyframes pulse {
     0% {
         transform: scale(1);

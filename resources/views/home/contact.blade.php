@@ -1,5 +1,5 @@
 @section('contact')
-    <article class="bg-white contact pb-5">
+    <section class="bg-white contact pb-5" id="contact">
         <div class="container p-4 d-flex justify-content-center flex-wrap">
             <h1 class="title-section w-100 mb-4" style="font-size: 2.8em">Entre em contato conosco</h1>
             <div class="w-100 d-flex justify-content-between">
@@ -45,5 +45,5 @@
                 </div>
             </form>
         </div>
-    </article>
+    </section>
 @endsection
