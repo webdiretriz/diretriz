@@ -1,5 +1,5 @@
 @section('header')
-<header class="header">
+<header class="header animate__animated">
     <div class="container d-flex justify-content-between align-items-center" style="height: 80px">
         <img src="{{url(mix('images/logo-light.png'))}}"
              style="width: 180px"
