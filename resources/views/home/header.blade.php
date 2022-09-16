@@ -11,7 +11,7 @@
                 <li><a href="#">Área do Cliente</a></li>
                 <li><a href="#news">Notícias</a></li>
                 <li><a href="#contact">Contato</a></li>
-                <li><a href="#">A Diretriz</a></li>
+                <li><a class="text-success" href="#diretriz">A Diretriz</a></li>
             </ul>
             <div class="info py-3 px-4 d-flex align-items-center">
                 <a href="https://webmail-seguro.com.br/diretriz.net/"

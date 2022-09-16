@@ -32,7 +32,4 @@
             </div>
         </div>
     </section>
-    <div class="w-100 bg-success d-flex justify-content-center flex-column align-items-center">
-        <img src="{{url(mix('images/senior.png'))}}" alt="Senior">
-    </div>
 @endsection

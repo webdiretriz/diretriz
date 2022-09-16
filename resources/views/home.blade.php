@@ -18,6 +18,7 @@
 @include('home.header')
 @include('home.banner')
 @include('home.service')
+@include('home.about')
 @include('home.client')
 @include('home.news')
 @include('home.contact')
@@ -31,6 +32,7 @@
     @yield('banner')
 </div>
 @yield('service')
+@yield('about')
 @yield('client')
 @yield('news')
 @yield('contact')

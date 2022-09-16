@@ -1,0 +1,111 @@
+.about{
+
+    .line{
+        position: relative;
+        padding: .5rem 0;
+    }
+
+    .line:before{
+        content: '';
+        position: absolute;
+        top: calc(50%);
+        height: 1px;
+        width: 100%;
+        border: 1px dashed #000;
+    }
+
+    .pointer{
+        position: absolute;
+        content: '';
+        height: 25px;
+        width: 25px;
+        z-index: 10;
+        background: map-get($theme-colors, 'primary');
+        top: calc(50% - 12.5px);
+        right: -14px;
+        border-radius: 50%;
+        background: #fff;
+        border: 5px solid #5ACD81;
+        box-shadow: 0 0 0 5px #000000;
+        margin: auto 0;
+    }
+
+    .single{
+        position: relative;
+        display: flex;
+        font-size: .9em;
+        width: 80%;
+        background: #f3f3f3;
+        padding: 1rem;
+        border-radius: 8px;
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            margin-left: 125px;
+        }
+
+        .tag{
+            top: -15px;
+            left: 20px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100px;
+            height: 90px;
+            background: map-get($theme-colors, 'success');
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .tag:before{
+            content: '';
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            top: 0;
+            left: -15px;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid #3d8f5c;
+            border-left: 8px solid transparent;
+            border-right: 8px solid #3d8f5c;
+        }
+
+        .tag:after{
+            content: '';
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            top: 0;
+            right: -15px;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid #3d8f5c;
+            border-left: 8px solid #3d8f5c;
+            border-right: 8px solid transparent;
+        }
+    }
+
+    .single:before{
+        content: '';
+        right: -40px;
+        top: calc(50% - 20px);
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid #f3f3f3;
+        border-right: 20px solid transparent;
+    }
+
+    .single.right:before{
+        left: -40px !important;
+        top: calc(50% - 20px);
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid transparent;
+        border-right: 20px solid #f3f3f3;
+    }
+}
