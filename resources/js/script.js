@@ -50,7 +50,7 @@ function ScrollHeader() {
     if ($(document).scrollTop() > 600) {
         header.addClass('animate__bounceIn active')
     } else {
-        if (header.hasClass('animate__bounceIn active')){
+        if (header.hasClass('animate__bounceIn active')) {
             header.addClass('animate__bounceOut')
             setTimeout(() => {
                 header.removeClass('animate__bounceOut')
@@ -61,30 +61,41 @@ function ScrollHeader() {
 }
 
 //Realiza o dropdown do site
-function Dropdown(){
+function Dropdown() {
+
     //click
-    $('body').on('click', '#j_dropdown', function (e){
+    $('body').on('click', '#j_dropdown', function (e) {
         e.preventDefault();
     });
 
     //mouse
-    $("body").on('mouseenter', '#j_dropdown', function (){
+    $("body").on('mouseenter', '#j_dropdown', function () {
         $(this).stop();
-        let drop = $(this).parent().find('#j_dropdown-link');
-
         $(this).addClass('text-success')
-        drop.removeClass('d-none animate__fadeOutDown')
-            .addClass('animate__fadeInUp d-flex');
+        $(this).parent().find('#j_dropdown-link').addClass('active');
     });
 
     //mouse
-    $("body").on('mouseleave', '#j_dropdown-link', function (){
+    $("body").on('mouseenter', '.links > li a', function () {
+        let n = $(this).attr('data-dropdown');
+        if (n !== undefined){
+            $("body").find("#j_dropdown-link[data-dropdown!='" + n + "']")
+                .stop()
+                .removeClass('active');
+            $("body").find("#j_dropdown[data-dropdown!='" + n + "']")
+                .removeClass('text-success');
+        }
+    });
+
+    //mouse
+    $("body").on('mouseenter', '#j_dropdown-link', function () {
+        $(this).stop().addClass('active');
+    });
+
+    //mouse
+    $("body").on('mouseleave', '#j_dropdown-link', function () {
         $(this).stop();
-        $(this).addClass('animate__fadeOutDown');
         $(this).parent().find('#j_dropdown').removeClass('text-success')
-        setTimeout(() => {
-            $(this).addClass('d-none')
-                .removeClass('animate__fadeInUp d-flex');
-        }, 500)
+        $(this).removeClass('active');
     });
 }

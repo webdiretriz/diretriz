@@ -6,31 +6,31 @@
              alt="Logo">
         <div class="d-flex align-items-center" style="height: 100%">
             <ul class="links mt-3">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" data-dropdown="0" class="active">Home</a></li>
                 <li>
-                    <a id="j_dropdown" href="#">Soluções</a>
-                    <ul id="j_dropdown-link" class="dropdown-link d-none animate__animated" style="min-width: 305px;">
+                    <a id="j_dropdown" data-dropdown="1" href="#">Soluções</a>
+                    <ul id="j_dropdown-link" data-dropdown="1" class="dropdown-link" style="min-width: 305px;">
                         <li class="text-success mb-2 fs-7">Pública</li>
-                        <li><a href="#">iMaq</a></li>
-                        <li><a href="#">Legislador</a></li>
-                        <li><a href="#">Terra</a></li>
+                        <li><a href="#"><i class="fas fa-tv me-1"></i>iMaq</a></li>
+                        <li><a href="#"><i class="fas fa-tv me-1"></i>Legislador</a></li>
+                        <li><a href="#"><i class="fas fa-tv me-1"></i>Terra</a></li>
                         <li class="text-success my-2 mt-3 fs-7">Empresarial</li>
-                        <li><a href="#">HCM (Gestão de Pessoas , RH)</a></li>
-                        <li><a href="#">RONDA (Gestão de Acesso e Segurança)</a></li>
+                        <li><a href="#"><i class="fas fa-users me-1"></i>HCM (Gestão de Pessoas , RH)</a></li>
+                        <li><a href="#"><i class="fas fa-users me-1"></i>RONDA (Gestão de Acesso e Segurança)</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a id="j_dropdown" href="#">Área do Cliente</a>
-                    <ul id="j_dropdown-link" class="dropdown-link d-none animate__animated" style="min-width: 210px;">
-                        <li><a href="#">Suporte</a></li>
-                        <li><a href="#">Conexão remota</a></li>
-                        <li><a href="#">Downloads</a></li>
-                        <li><a href="#">i.Maq Web (Aquisição)</a></li>
+                    <a id="j_dropdown" data-dropdown="2" href="#">Área do Cliente</a>
+                    <ul id="j_dropdown-link" data-dropdown="2" class="dropdown-link" style="min-width: 210px;">
+                        <li><a href="#"><i class="fas fa-headset me-1"></i>Suporte</a></li>
+                        <li><a href="#"><i class="fas fa-house-laptop me-1"></i>Conexão remota</a></li>
+                        <li><a href="#"><i class="fas fa-download me-1"></i>Downloads</a></li>
+                        <li><a href="#"><i class="fas fa-tv me-1"></i>i.Maq Web (Aquisição)</a></li>
                     </ul>
                 </li>
-                <li><a href="#news">Notícias</a></li>
-                <li><a href="#contact">Contato</a></li>
-                <li><a class="text-success" href="#diretriz">A Diretriz</a></li>
+                <li><a data-dropdown="0" href="#news">Notícias</a></li>
+                <li><a data-dropdown="0" href="#contact">Contato</a></li>
+                <li><a data-dropdown="0" class="text-success" href="#diretriz">A Diretriz</a></li>
             </ul>
             <div class="info py-3 px-4 d-flex align-items-center">
                 <a href="https://webmail-seguro.com.br/diretriz.net/"

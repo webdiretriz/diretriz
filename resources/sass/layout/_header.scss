@@ -26,6 +26,8 @@
 
         .dropdown-link{
             position: absolute;
+            visibility: hidden;
+            opacity: 0;
             flex-wrap: wrap;
             list-style: none;
             background: #fff;
@@ -33,7 +35,8 @@
             max-width: 305px;
             padding: 15px 1.3rem;
             z-index: 10;
-            top: 100%;
+            transition: all .3s ease;
+            top: 120%;
             border-top: 3px solid map-get($theme-colors, 'success');
 
             li{
@@ -43,8 +46,15 @@
             li a{
                 font-size: .9em;
                 color: map-get($theme-colors, 'light');
-                margin: 8px 0;
+                margin: 10px 0;
             }
+        }
+
+        .dropdown-link.active{
+            opacity: 1;
+            transition: all .3s ease;
+            top: 100%;
+            visibility: visible;
         }
     }
 
