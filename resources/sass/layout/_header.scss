@@ -23,6 +23,29 @@
         a.active{
             color: map-get($theme-colors, 'success');
         }
+
+        .dropdown-link{
+            position: absolute;
+            flex-wrap: wrap;
+            list-style: none;
+            background: #fff;
+            min-width: 200px;
+            max-width: 305px;
+            padding: 15px 1.3rem;
+            z-index: 10;
+            top: 100%;
+            border-top: 3px solid map-get($theme-colors, 'success');
+
+            li{
+                width: 100%;
+            }
+
+            li a{
+                font-size: .9em;
+                color: map-get($theme-colors, 'light');
+                margin: 8px 0;
+            }
+        }
     }
 
     .info{
@@ -36,6 +59,7 @@
     background: #fff;
     box-shadow: 2px 5px 10px rgba(59, 59, 59, 0.5);
     z-index: 10;
+    border-bottom: 1px solid #ccc;
 
     .text-white{
         color: #000 !important;
@@ -45,5 +69,9 @@
         a{
             color: map-get($theme-colors, 'primary');
         }
+    }
+
+    .info{
+        border-left: 1px solid #ccc;
     }
 }

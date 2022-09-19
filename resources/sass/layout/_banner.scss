@@ -4,7 +4,6 @@
     top: 80px;
     height: calc(100% - 80px);
     width: 100%;
-    z-index: 1;
     color: map-get($theme-colors, 'white');
     font-family: 'Oswald', sans-serif !important;
 }

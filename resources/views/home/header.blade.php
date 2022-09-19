@@ -7,8 +7,27 @@
         <div class="d-flex align-items-center" style="height: 100%">
             <ul class="links mt-3">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Soluções</a></li>
-                <li><a href="#">Área do Cliente</a></li>
+                <li>
+                    <a id="j_dropdown" href="#">Soluções</a>
+                    <ul id="j_dropdown-link" class="dropdown-link d-none animate__animated" style="min-width: 305px;">
+                        <li class="text-success mb-2 fs-7">Pública</li>
+                        <li><a href="#">iMaq</a></li>
+                        <li><a href="#">Legislador</a></li>
+                        <li><a href="#">Terra</a></li>
+                        <li class="text-success my-2 mt-3 fs-7">Empresarial</li>
+                        <li><a href="#">HCM (Gestão de Pessoas , RH)</a></li>
+                        <li><a href="#">RONDA (Gestão de Acesso e Segurança)</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="j_dropdown" href="#">Área do Cliente</a>
+                    <ul id="j_dropdown-link" class="dropdown-link d-none animate__animated" style="min-width: 210px;">
+                        <li><a href="#">Suporte</a></li>
+                        <li><a href="#">Conexão remota</a></li>
+                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">i.Maq Web (Aquisição)</a></li>
+                    </ul>
+                </li>
                 <li><a href="#news">Notícias</a></li>
                 <li><a href="#contact">Contato</a></li>
                 <li><a class="text-success" href="#diretriz">A Diretriz</a></li>

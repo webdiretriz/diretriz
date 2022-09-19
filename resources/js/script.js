@@ -5,6 +5,7 @@ $(document).ready(function () {
         delay: 300,
         reset: true
     });
+    Dropdown();
 });
 
 //Evento do scroll
@@ -57,4 +58,33 @@ function ScrollHeader() {
             }, 500)
         }
     }
+}
+
+//Realiza o dropdown do site
+function Dropdown(){
+    //click
+    $('body').on('click', '#j_dropdown', function (e){
+        e.preventDefault();
+    });
+
+    //mouse
+    $("body").on('mouseenter', '#j_dropdown', function (){
+        $(this).stop();
+        let drop = $(this).parent().find('#j_dropdown-link');
+
+        $(this).addClass('text-success')
+        drop.removeClass('d-none animate__fadeOutDown')
+            .addClass('animate__fadeInUp d-flex');
+    });
+
+    //mouse
+    $("body").on('mouseleave', '#j_dropdown-link', function (){
+        $(this).stop();
+        $(this).addClass('animate__fadeOutDown');
+        $(this).parent().find('#j_dropdown').removeClass('text-success')
+        setTimeout(() => {
+            $(this).addClass('d-none')
+                .removeClass('animate__fadeInUp d-flex');
+        }, 500)
+    });
 }
