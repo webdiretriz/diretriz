@@ -1,14 +1,21 @@
-//Banner do site
-.banner{
+.banner {
     position: absolute;
     top: 80px;
     height: calc(100% - 80px);
     width: 100%;
     color: map-get($theme-colors, 'white');
     font-family: 'Oswald', sans-serif !important;
+
+    .container {
+        width: 60%;
+    }
+
+    .title {
+        font-size: 3.8em;
+    }
 }
 
-.banner::before{
+.banner::before {
     content: '';
     position: absolute;
     width: 342px;
@@ -18,7 +25,7 @@
     background: url("../images/banner.png") no-repeat;
 }
 
-.banner::after{
+.banner::after {
     content: '';
     position: absolute;
     width: 176px;
@@ -26,4 +33,60 @@
     bottom: 0;
     right: 0;
     background: url("../images/banner-1.png") no-repeat;
+}
+
+//Desing Responsivo
+//992px
+@media (max-width: $xg) {
+    .banner {
+        .container {
+            position: relative;
+            width: 90%;
+        }
+
+        .title {
+            font-size: 3.2em;
+        }
+    }
+}
+
+//768px
+@media (max-width: $md) {
+    .banner {
+        .container {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 2.5em;
+        }
+    }
+
+    .banner::before {
+        width: 250px;
+        height: 360px;
+        background-size: 100%;
+    }
+
+    .banner::after {
+        display: none;
+    }
+}
+
+//576px
+@media (max-width: $sm) {
+    .banner {
+        .container {
+            width: 95%;
+        }
+
+        .title {
+            font-size: 2em;
+        }
+    }
+
+    .banner::before {
+        display: none;
+    }
+
 }

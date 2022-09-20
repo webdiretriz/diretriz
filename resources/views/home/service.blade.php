@@ -7,7 +7,7 @@
                     perspiciatis vitae
                     voluptate. Dolor laboriosam, maiores mollitia odit perferendis porro quas quo ratione vel vitae!
                     Fuga rem sint soluta?</p>
-                <div class="w-100 d-flex flex-wrap">
+                <div class="w-100 d-flex mt-4 flex-wrap">
                     <x-service image="controladoria"
                                title="Controladoria"
                                link="texte"

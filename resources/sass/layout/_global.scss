@@ -14,10 +14,36 @@
         animation: pulse 13s infinite;
         animation-timing-function: linear;
     }
+
+    //992px
+    @media (max-width: $xg) {
+        .initial-bg{
+            width: 150%;
+        }
+    }
+
+    //768px
+    @media (max-width: $md) {
+        .initial-bg{
+            width: 200%;
+        }
+    }
+
+    //576px
+    @media (max-width: $sm) {
+        .initial-bg{
+            width: 300%;
+        }
+    }
 }
 
 .title-section{
     font-family: 'Oswald', sans-serif !important;
+
+    //768px
+    @media (max-width: $md) {
+        font-size: 2.3em;
+    }
 }
 
 .link{
@@ -62,4 +88,12 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     background: map-get($theme-colors, 'success');
     border-radius: 5px;
+}
+
+//Desing responsivo - GERAL
+//768px
+@media (max-width: $md) {
+    section{
+        font-size: .9em !important;
+    }
 }

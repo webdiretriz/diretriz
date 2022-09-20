@@ -1,4 +1,3 @@
-//cabeçalho
 .header{
     position: absolute;
     top: 0;
@@ -8,6 +7,10 @@
     display: flex;
     align-items: center;
     font-family: 'Oswald', sans-serif !important;
+
+    .container{
+        height: 80px;
+    }
 
     .links{
         display: flex;
@@ -60,7 +63,7 @@
 
     .info{
         border-left: 1px solid map-get($theme-colors, 'gray');
-        height: 100%;
+        color: #fff;
     }
 }
 
@@ -83,5 +86,93 @@
 
     .info{
         border-left: 1px solid #ccc;
+    }
+}
+
+//Desing Responsivo
+//992px
+@media (max-width: $xg) {
+    .header{
+        position: fixed;
+        width: 300px;
+        background: #fff;
+        top: 0;
+        bottom: 0;
+        right: -300px;
+        transition: all .5s ease-in;
+        z-index: 2;
+        overflow-x: auto;
+
+        .container{
+            height: 100%;
+
+            .links{
+                display: flex;
+                list-style: none;
+                text-transform: uppercase;
+
+                li{
+                    padding: .5rem 0;
+                }
+
+                a{
+                    color: map-get($theme-colors, 'primary');
+                    text-decoration: none;
+                    margin-right: 2rem;
+                    font-size: 1.1em;
+                }
+
+                a.active{
+                    color: map-get($theme-colors, 'success');
+                }
+
+                .dropdown-link{
+                    position: relative;
+                    visibility: visible;
+                    opacity: 1;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    background: #fff;
+                    width: 80% !important;
+                    min-width: 80% !important;
+                    display: flex;
+                    padding: 10px .5rem;
+                    z-index: 10;
+                    transition: all .3s ease;
+                    top: 0;
+                    border-top: 3px solid map-get($theme-colors, 'success');
+
+                    li{
+                        width: 100%;
+                        padding: 1px !important;
+                    }
+                }
+            }
+        }
+
+        .info{
+            border-left: none !important;
+            color: #000;
+
+            a{
+                padding: .5rem 0;
+                font-size: 1.1em !important;
+            }
+        }
+    }
+
+    .header.active-rwd{
+        right: 0;
+        transition: all .5s ease-in;
+    }
+
+    .header::-webkit-scrollbar {
+        background: map-get($theme-colors, 'white');
+        width: 8px;
+    }
+
+    .header::-webkit-scrollbar-thumb {
+        background: map-get($theme-colors, 'light');
+        border-radius: 5px;
     }
 }

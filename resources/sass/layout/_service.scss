@@ -1,8 +1,11 @@
-//Nossos serviços
 .service {
     display: flex;
     justify-content: space-between;
     color: map-get($theme-colors, 'light');
+
+    .title-section{
+        color: map-get($theme-colors, 'primary') !important;
+    }
 
     h1 {
         font-size: 2.8em;
@@ -24,6 +27,21 @@
         h2 {
             font-size: 1.7em;
             color: map-get($theme-colors, 'white');
+        }
+
+        //Desing Responsivo
+        //992px
+        @media (max-width: $xg) {
+            width: 100%;
+            align-items: flex-start;
+
+            img{
+                width: 80px;
+            }
+
+            .title-section{
+                font-size: 1.8em !important;
+            }
         }
     }
 }

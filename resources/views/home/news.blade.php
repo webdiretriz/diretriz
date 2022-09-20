@@ -3,7 +3,7 @@
         <div class="container flex-wrap d-flex justify-content-center p-5">
             <h1 class="title-section">Últimas notícias e artigos</h1>
             <p class="w-100 text-center title-section fs-5">Fique por dentro das novidades da Deretriz</p>
-            <div class="w-100 mt-4 d-flex flex-wrap">
+            <div class="w-100 mt-4 d-flex flex-wrap justify-content-center justify-content-xl-start">
                 <x-news image="https://www.diretriz.net/imgs/carrousel/c1575-imgpsh_fullsize_anim-1-.png"
                         title="Sistema de Informações sobre Orçamentos Públicos em Educação - SIOPE"/>
                 <x-news image="https://www.diretriz.net/imgs/carrousel/a702b-treinamento.jpg"

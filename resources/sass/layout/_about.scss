@@ -108,4 +108,31 @@
         border-left: 20px solid transparent;
         border-right: 20px solid #f3f3f3;
     }
+
+    //Desing Responsivo
+    //992px
+    @media (max-width: $xg) {
+
+        .line{
+            width: 100% !important;
+            border: none !important;
+        }
+
+        .line::before{
+            display: none !important;
+        }
+
+        .pointer{
+            display: none !important;
+        }
+
+        .single{
+            width: 95%;
+            margin: 20px 0;
+
+            .title-section{
+                font-size: 1.8em !important;
+            }
+        }
+    }
 }

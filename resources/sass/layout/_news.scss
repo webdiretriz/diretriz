@@ -1,6 +1,7 @@
 //Notícias e artigos
 .news {
     position: relative;
+    overflow: hidden;
 
     h1 {
         font-size: 2.8em;
@@ -33,6 +34,25 @@
             left: 0;
             background: map-get($theme-colors, 'success');
         }
+
+        //Desing Responsivo
+        //992px
+        @media (max-width: $xg) {
+            width: calc(50% - 20px);
+            max-width: 300px;
+            margin-top: 20px;
+        }
+
+        //776px
+        @media (max-width: $md) {
+            width: calc(100% - 20px);
+            max-width: 300px;
+            margin-top: 20px;
+
+            .title-section{
+                font-size: 1.3em !important;
+            }
+        }
     }
 }
 
@@ -41,9 +61,8 @@
     bottom: 0;
     right: 0;
     position: absolute;
-    width: 50%;
-    max-height: 600px;
-    height: 90%;
+    width: 796px;
+    height: 580px;
     background: url("../images/segment.png") no-repeat;
     background-size: 100% 100%;
     transform: scaleX(-1);

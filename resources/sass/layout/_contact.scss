@@ -8,6 +8,31 @@
         border-radius: 8px;
         background: map-get($theme-colors, 'light');
         color: map-get($theme-colors, 'white');
+
+        //Desing Responsivo
+        //992px
+        @media (max-width: $xg) {
+            width: calc(100% - 20px);
+            margin-top: 20px;
+        }
+    }
+
+    form{
+        width: 75%;
+
+        .field{
+            width: calc(50% - 15px);
+        }
+
+        //Desing Responsivo
+        //992px
+        @media (max-width: $md) {
+            width: 100%;
+
+            .field{
+                width: calc(100% - 0px);
+            }
+        }
     }
 
     .single::before {

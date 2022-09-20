@@ -1,6 +1,7 @@
 //área do cliente
 .client{
     position: relative;
+    overflow-x: hidden;
 
     .single {
         display: flex;
@@ -36,6 +37,14 @@
     .single:nth-child(3n+3){
         border-right: 1px solid #2a2a2a;
     }
+
+    //Desing Responsivo
+    //992px
+    @media (max-width: $xg) {
+        .single{
+            border: none !important;
+        }
+    }
 }
 
 .client:before{
@@ -43,8 +52,8 @@
     bottom: 0;
     left: 0;
     position: absolute;
-    width: 50%;
-    height: 90%;
+    width: 796px;
+    height: 580px;
     background: url("../images/segment.png") no-repeat;
     background-size: 100% 100%;
 }
