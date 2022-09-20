@@ -29,18 +29,18 @@
                             <li><a href="{{route('legislador')}}"><i class="fas fa-tv me-1"></i>Legislador</a></li>
                             <li><a href="{{route('terra')}}"><i class="fas fa-tv me-1"></i>Terra</a></li>
                             <li class="text-success my-2 mt-3 fs-7">Empresarial</li>
-                            <li><a href="#"><i class="fas fa-users me-1"></i>HCM (Gestão de Pessoas , RH)</a></li>
-                            <li><a href="#"><i class="fas fa-users me-1"></i>RONDA (Gestão de Acesso e Segurança)</a>
+                            <li><a href="{{route('gestao-rh')}}"><i class="fas fa-users me-1"></i>HCM (Gestão de Pessoas , RH)</a></li>
+                            <li><a href="{{route('seguranca')}}"><i class="fas fa-users me-1"></i>RONDA (Gestão de Acesso e Segurança)</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a id="j_dropdown" data-dropdown="2" href="#">Área do Cliente</a>
                         <ul id="j_dropdown-link" data-dropdown="2" class="dropdown-link" style="min-width: 210px;">
-                            <li><a href="#"><i class="fas fa-headset me-1"></i>Suporte</a></li>
+                            <li><a href="https://www.diretriz.net/suporte.php/login/index/url/" target="_blank"><i class="fas fa-headset me-1"></i>Suporte</a></li>
                             <li><a href="#"><i class="fas fa-house-laptop me-1"></i>Conexão remota</a></li>
                             <li><a href="#"><i class="fas fa-download me-1"></i>Downloads</a></li>
-                            <li><a href="#"><i class="fas fa-tv me-1"></i>i.Maq Web (Aquisição)</a></li>
+                            <li><a href="https://imaq.diretriz.net/adm_Login/" target="_blank"><i class="fas fa-tv me-1"></i>i.Maq Web (Aquisição)</a></li>
                         </ul>
                     </li>
                     <li><a data-dropdown="0" id="j_scrollNav" href="#news">Notícias</a></li>

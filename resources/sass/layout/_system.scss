@@ -51,4 +51,10 @@
             }
         }
     }
+
+    //Desing Responsivo
+    //992px
+    @media (max-width: $xg) {
+        margin-top: 0 !important;
+    }
 }
