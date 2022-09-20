@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-Route::get('/imaq', function (){
-    return view('pages/imaq');
-})->name('imaq');
+Route::get('/', function () {return view('home');})->name('home');
+Route::get('/imaq', function (){return view('pages/imaq');})->name('imaq');
+Route::get('/legislador', function (){return view('pages/legislador');})->name('legislador');
+Route::get('/terra', function (){return view('pages/terra');})->name('terra');
