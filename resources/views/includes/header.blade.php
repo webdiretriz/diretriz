@@ -20,12 +20,12 @@
 
                 {{--Links--}}
                 <ul class="links flex-column flex-xl-row mt-0 mt-xl-3">
-                    <li><a href="" data-dropdown="0" class="text-success">Home</a></li>
+                    <li><a href="{{route('home')}}" data-dropdown="0" class="text-success">Home</a></li>
                     <li>
                         <a id="j_dropdown" data-dropdown="1" href="#">Soluções</a>
                         <ul id="j_dropdown-link" data-dropdown="1" class="dropdown-link" style="min-width: 305px;">
                             <li class="text-success mb-2 fs-7">Pública</li>
-                            <li><a href="#"><i class="fas fa-tv me-1"></i>iMaq</a></li>
+                            <li><a href="{{route('imaq')}}"><i class="fas fa-tv me-1"></i>iMaq</a></li>
                             <li><a href="#"><i class="fas fa-tv me-1"></i>Legislador</a></li>
                             <li><a href="#"><i class="fas fa-tv me-1"></i>Terra</a></li>
                             <li class="text-success my-2 mt-3 fs-7">Empresarial</li>

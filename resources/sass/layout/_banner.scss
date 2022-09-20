@@ -13,6 +13,44 @@
     .title {
         font-size: 3.8em;
     }
+
+    .destaque::before{
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: url("../images/destaque.png") no-repeat;
+        background-size: 100%;
+        top: -50px;
+        right: -230px;
+        animation: animated .7s infinite;
+        animation-timing-function: linear;
+    }
+
+    .destaque::after{
+        content: '';
+        position: absolute;
+        width: 250px;
+        height: 100px;
+        background: url("../images/destaque-1.png") no-repeat;
+        background-size: 100%;
+        top: -25px;
+        left: -60px;
+    }
+
+    @keyframes animated {
+        0% {
+            transform: translate(0px);
+        }
+
+        50% {
+            transform: translate(-30px);
+        }
+
+        100% {
+            transform: translate(0);
+        }
+    }
 }
 
 .banner::before {
