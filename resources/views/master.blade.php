@@ -10,6 +10,7 @@
     {{--style--}}
     <link rel="shortcut icon" href="{{ url(mix('images/favicon.png')) }}"/>
     <link rel="stylesheet" href="{{url(mix('css/style.min.css'))}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
 
     {{--React--}}
     <link href="{{ env('APP_URL') }}" id="react-base" rel="base"/>
@@ -30,5 +31,6 @@
 <script src="{{ url(mix('js/libary.min.js')) }}"></script>
 <script src="{{ url(mix('js/script.min.js')) }}"></script>
 <script src="https://kit.fontawesome.com/ada19db140.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
 </body>
 </html>

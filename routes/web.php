@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AppController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {return view('home');})->name('home');
-Route::get('/imaq', function (){return view('pages/imaq');})->name('imaq');
-Route::get('/legislador', function (){return view('pages/legislador');})->name('legislador');
-Route::get('/terra', function (){return view('pages/terra');})->name('terra');
-Route::get('/gestao-rh', function (){return view('pages/rh');})->name('gestao-rh');
-Route::get('/seguranca', function (){return view('pages/seguranca');})->name('seguranca');
+Route::get('/', [AppController::class, 'home'])->name('home');
+
+//Soluções
+Route::get('/imaq', [AppController::class, 'imaq'])->name('imaq');
+Route::get('/legislador', [AppController::class, 'legislador'])->name('legislador');
+Route::get('/terra', [AppController::class, 'terra'])->name('terra');
+Route::get('/gestao-rh', [AppController::class, 'gestaoRh'])->name('gestao-rh');
+Route::get('/seguranca', [AppController::class, 'seguranca'])->name('seguranca');
+
+//Cliente
+Route::get('/acesso-remoto', [AppController::class, 'acessoRemoto'])->name('acesso-remoto');
+Route::get('/downloads', [AppController::class, 'downloads'])->name('downloads');
+

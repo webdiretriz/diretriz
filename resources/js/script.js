@@ -2,6 +2,7 @@ $(document).ready(function () {
     ScrollNav('.links')
     Dropdown();
     MenuRWD();
+    Tree();
 });
 
 //Evento do scroll
@@ -106,5 +107,28 @@ function MenuRWD() {
     $("body").on('click', "#j_menu", function (e) {
         e.preventDefault();
         $("body").find('.header').stop().toggleClass('active-rwd')
+    });
+}
+
+//Realiza a montagem da arvore de arquivos
+function Tree() {
+    $('#jstree').on('select_node.jstree', function (node, selected) {
+        let link = selected.node.a_attr.href;
+        console.log(link)
+        if (link !== "#")
+            window.location.href = link
+    }).jstree({
+        "types": {
+            "default": {
+                "icon": "fas fs-5 fa-folder text-secondary"
+            },
+            "files": {
+                "icon": "fas fs-5 fa-file-lines text-info"
+            },
+            "version": {
+                "icon": "fas fs-5 fa-code-compare text-danger"
+            }
+        },
+        "plugins": ['types']
     });
 }
