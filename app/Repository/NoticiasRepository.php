@@ -56,4 +56,20 @@ class NoticiasRepository
             ->where('id', '=', $id)
             ->first();
     }
+
+    /**
+     * Verifica se pode exibir o destaque
+     * @return bool
+     */
+    public function verifyDestaque(): bool
+    {
+        $start = date('Y-m-d', strtotime('-15 days', strtotime('now')));
+        $boletim = DB::table('boletim_informativo')
+            ->whereBetween('data', [$start, date('Y-m-d')])
+            ->count();
+        $news = DB::table('noticias')
+            ->whereBetween('data', [$start, date('Y-m-d')])
+            ->count();
+        return ($boletim > 0 || $news > 0) ?? false;
+    }
 }

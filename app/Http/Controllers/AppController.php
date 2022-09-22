@@ -29,7 +29,8 @@ class AppController extends Controller
     {
         return view('home', [
             'boletim' => $this->noticias->findAllBoletim()->toArray(),
-            'news' => $this->noticias->findAllNews(3)->toArray()
+            'news' => $this->noticias->findAllNews(3)->toArray(),
+            'destaque' => $this->noticias->verifyDestaque()
         ]);
     }
 
