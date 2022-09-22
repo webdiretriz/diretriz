@@ -2,26 +2,38 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Traits\Response;
+use App\Repository\ContactRepository;
 use App\Repository\DownlodsRepository;
 use App\Repository\NoticiasRepository;
 use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
+    use Response;
+
     /** @var DownlodsRepository */
     private $download;
 
     /** @var NoticiasRepository */
     private $noticias;
 
+    /** @var ContactRepository */
+    private $contact;
+
     /**
      * Injeção de dependência
      * @param DownlodsRepository $download
      */
-    public function __construct(DownlodsRepository $download, NoticiasRepository $noticias)
+    public function __construct(
+        DownlodsRepository $download,
+        NoticiasRepository $noticias,
+        ContactRepository  $contact
+    )
     {
         $this->download = $download;
         $this->noticias = $noticias;
+        $this->contact = $contact;
     }
 
     //Página home
@@ -32,6 +44,14 @@ class AppController extends Controller
             'news' => $this->noticias->findAllNews(3)->toArray(),
             'destaque' => $this->noticias->verifyDestaque()
         ]);
+    }
+
+    //Realiza a gestão de contato do site
+    public function contact(Request $request)
+    {
+        return $this->message('success', $this->contact->manager($request))
+            ->clear(true)
+            ->response();
     }
 
     //Página iMaq

@@ -15,32 +15,44 @@
                            mail="contato@diretriz.net"
                            phone="(95) 99165-5115 / (95) 98406-3218"/>
             </div>
-            <form method="post" name="contact" class="d-flex justify-content-between flex-wrap mt-5">
+            <form method="post" name="contact" action="{{route('contact')}}"
+                  class="d-flex justify-content-between flex-wrap mt-5">
                 <div class="field mt-4">
-                    <input type="text" class="form-control" placeholder="Seu nome">
+                    <input type="text" name="nome" required class="form-control" placeholder="Seu nome">
+                    <div id="j_feedback"></div>
                 </div>
                 <div class="field mt-4">
-                    <input type="email" class="form-control" placeholder="E-mail">
+                    <input type="email" name="email" required class="form-control" placeholder="E-mail">
+                    <div id="j_feedback"></div>
                 </div>
                 <div class="field mt-4">
-                    <input type="text" class="form-control" placeholder="Sua cidade">
+                    <input type="text" name="cidade" required class="form-control" placeholder="Sua cidade">
+                    <div id="j_feedback"></div>
                 </div>
                 <div class="field mt-4">
-                    <input type="text" class="form-control" placeholder="Assunto">
+                    <select class="form-control" required name="assunto">
+                        <option value="recrutamento">Recrutamento</option>
+                        <option value="ouvidoria">Ouvidoria</option>
+                    </select>
+                    <div id="j_feedback"></div>
                 </div>
                 <div class="mt-4" style="width: 100%">
-                    <textarea class="form-control" placeholder="Escreva a mensagem..." rows="3"></textarea>
+                    <textarea class="form-control" required name="mensagem" placeholder="Escreva a mensagem..."
+                              rows="3"></textarea>
+                    <div id="j_feedback"></div>
                 </div>
                 <div class="form-check mt-2">
-                    <input class="form-check-input" type="checkbox" value="" id="lgpd">
+                    <input class="form-check-input" name="lgpd" type="checkbox" value="on" id="lgpd">
                     <label class="form-check-label" for="lgpd">
-                        Declaro que li e estou de acordo com a <a href="" class="link-success">Política de Privacidade</a> e <a class="link-success" href="">Cookies</a> da Diretriz Informática
+                        Declaro que li e estou de acordo com a <a href="" class="link-success">Política de
+                            Privacidade</a> e <a class="link-success" href="">Cookies</a> da Diretriz Informática
                         com relação aos meus dados fornecidos neste formulário.
                     </label>
                 </div>
                 <div class="w-100 mt-4 d-flex justify-content-center">
-                    <button class="btn bg-success text-dark title-section fs-5 m-0 p-2 px-3"><i
-                            class="bi bi-send-fill me-1"></i>Enviar sua mensagem
+                    <button class="btn bg-success text-dark title-section fs-5 m-0 p-2 px-3"
+                            id="j_action">
+                        <i class="bi bi-send-fill me-1"></i>Enviar sua mensagem
                     </button>
                 </div>
             </form>

@@ -1,0 +1,48 @@
+/*
+|---------------------------------
+| MESSAGE
+|---------------------------------
+| Components utilizado na aplicação
+| 1 - Snackbar
+*/
+
+//warning
+.snackbar-container.warning{
+    background: map-get($theme-colors, 'warning') !important;
+
+    p, .action{
+        color: map-get($theme-colors, 'app-primary') !important;
+    }
+}
+
+//error
+.snackbar-container.error{
+    background: map-get($theme-colors, 'danger') !important;
+
+    p, .action{
+        color: $white !important;
+    }
+}
+
+//success
+.snackbar-container.success{
+    background: map-get($theme-colors, 'success') !important;
+
+    p, .action{
+        color: $white !important;
+    }
+}
+
+//info
+.snackbar-container.info{
+    background: map-get($theme-colors, 'info') !important;
+
+    p, .action{
+        color: $white !important;
+    }
+}
+
+//Detalhes da mensagem
+.snackbar-container .details{
+    display: none;
+}

@@ -22,12 +22,14 @@ mix
     .postCss('node_modules/animate.css/animate.css', 'public/css')
     .postCss('node_modules/bootstrap-icons/font/bootstrap-icons.css', 'public/css')
     .postCss('node_modules/primeicons/primeicons.css', 'public/css')
+    .postCss('node_modules/node-snackbar/dist/snackbar.css', 'public/css')
     .combine([
         'public/css/app.css',
         'public/css/magic.css',
         'public/css/animate.css',
         'public/css/bootstrap-icons.css',
         'public/css/primeicons.css',
+        'public/css/snackbar.css',
     ], 'public/css/style.css')
     .minify('public/css/style.css')
 
@@ -44,6 +46,7 @@ mix
         'resources/js/lib/maskMoney.js',
         'resources/js/lib/preview-password.js',
         'resources/js/lib/popper.min.js',
+        'node_modules/node-snackbar/dist/snackbar.js',
         'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
         'node_modules/scrollreveal/dist/scrollreveal.min.js',
     ], 'public/js/libary.js').minify('public/js/libary.js')
