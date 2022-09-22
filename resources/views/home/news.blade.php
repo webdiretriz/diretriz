@@ -23,11 +23,11 @@
                     @endforeach
                 @endempty
             </div>
-            <div class="w-100 d-flex justify-content-center mt-5">
-                <div class="link">
-                    <p>Para ver mais notícias e artigos <a class="text-success" href="#">clique aqui</a></p>
-                </div>
-            </div>
         </div>
     </section>
+    <div class="w-100 d-flex bg-white justify-content-center pb-3">
+        <div class="link">
+            <p>Para ver mais notícias e artigos <a class="text-success" href="{{route('noticias-list')}}">clique aqui</a></p>
+        </div>
+    </div>
 @endsection

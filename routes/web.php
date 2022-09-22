@@ -29,4 +29,5 @@ Route::get('/downloads', [AppController::class, 'downloads'])->name('downloads')
 
 //Noticias
 Route::get('/noticias/{id}', [AppController::class, 'noticiasView'])->name('noticias-view');
+Route::get('/noticias-lista/{categoria?}', [AppController::class, 'noticiasList'])->name('noticias-list');
 

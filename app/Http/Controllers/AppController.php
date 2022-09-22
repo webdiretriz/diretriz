@@ -85,4 +85,13 @@ class AppController extends Controller
             'news' => $this->noticias->findNewsId($id)
         ]);
     }
+
+    //Página Visualização de noticias
+    public function noticiasList(int $categoria = null)
+    {
+        return view('pages.news.list', [
+            'categoria' => $this->noticias->findAllCategory(),
+            'news' => $categoria === 999 ? $this->noticias->findAllBoletim(20) : $this->noticias->findAllNews(6, $categoria)
+        ]);
+    }
 }

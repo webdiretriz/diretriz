@@ -19,6 +19,10 @@ class NoticiasRepository
         return $result->limit($limit)
             ->get()->map(function ($item) {
                 $data = $item;
+                $data->id = $item->codigo;
+                $data->assunto = $item->titulo;
+                $data->capa = url(mix('images/boletim.jpg'));
+                $data->link = 'https://www.diretriz.net/imgs/boletim/' . $item->arquivo;
                 $data->usuario = DB::table('admin')->where('id', $item->usuario)
                     ->first()->nome;
                 return $data;
@@ -26,20 +30,26 @@ class NoticiasRepository
     }
 
     /**
-     * Realiza a pesquisa dos boletins informativos
+     * Realiza a pesquisa as notícias
      * @param int $limit
      * @return Collection
      */
-    public function findAllNews(int $limit = 1): Collection
+    public function findAllNews(int $limit = 1, int $categoria = null): Collection
     {
-        $result = DB::table('noticias')
+        $categoria = empty($categoria) ? false : $categoria;
+        return DB::table('noticias')
             ->where('divulga', '=', 'S')
-            ->orderBy('data', 'desc');
-        return $result->limit($limit)
+            ->when($categoria, function ($query, $categoria) {
+                $query->where('categoria', '=', $categoria);
+            })
+            ->orderBy('data', 'desc')
+            ->limit($limit)
             ->get()->map(function ($item) {
                 $data = $item;
-                $data->usuario = DB::table('admin')->where('id', $item->idAdmin)
-                    ->first()->nome;
+                $user = DB::table('admin')->where('id', $item->idAdmin)
+                    ->first();
+                $data->usuario = empty($user) ? '' : $user->nome;
+                $data->link = route('noticias-view', ['id' => $item->id]);
                 return $data;
             });
     }
@@ -71,5 +81,19 @@ class NoticiasRepository
             ->whereBetween('data', [$start, date('Y-m-d')])
             ->count();
         return ($boletim > 0 || $news > 0) ?? false;
+    }
+
+    /**
+     * Pesquisa as categorias com notícias
+     * @return Collection
+     */
+    public function findAllCategory()
+    {
+        return DB::table('noticias')
+            ->select(['noticias_categoria.*'])
+            ->join('noticias_categoria', 'noticias_categoria.idcategoria', '=', 'noticias.categoria')
+            ->where('noticias.divulga', '=', 'S')
+            ->groupBy('noticias_categoria.idcategoria')
+            ->get();
     }
 }
