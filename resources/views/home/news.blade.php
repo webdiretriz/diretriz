@@ -4,14 +4,24 @@
             <h1 class="title-section">Últimas notícias e artigos</h1>
             <p class="w-100 text-center title-section fs-5">Fique por dentro das novidades da Deretriz</p>
             <div class="w-100 mt-4 d-flex flex-wrap justify-content-center justify-content-xl-start">
-                <x-news image="https://www.diretriz.net/imgs/carrousel/c1575-imgpsh_fullsize_anim-1-.png"
-                        title="Sistema de Informações sobre Orçamentos Públicos em Educação - SIOPE"/>
-                <x-news image="https://www.diretriz.net/imgs/carrousel/a702b-treinamento.jpg"
-                        title="Nota orienta 04/2021 traz alteração no prazo de envio dos eventos S-2220 e S-2240"/>
-                <x-news image="https://www.diretriz.net/imgs/carrousel/a5d34-novatabelainss.png"
-                        title="Gestão dos Recursos do COVID-19 no i.Maq"/>
-                <x-news image="https://www.tce.mg.gov.br/ImagemDestaque/1111624903.jpg"
-                        title="Comunicado SISOP-MG N. 01/2020"/>
+                @empty(!$boletim)
+                    <x-news image="{{url(mix('images/boletim.jpg'))}}"
+                            autor="{{$boletim[0]->usuario}}"
+                            title="{{$boletim[0]->titulo}}"
+                            text="Fique por dentro de informações e comunicados importantes para que você que atua na área pública e/ou empresarial"
+                            link="https://www.diretriz.net/imgs/boletim/{{$boletim[0]->arquivo}}"
+                            data="{{$boletim[0]->data}}"/>
+                @endempty
+                @empty(!$news)
+                    @foreach($news as $item)
+                        <x-news image="{{(empty($item->capa) ? url(mix('images/news.jpg')) : $item->capa)}}"
+                                autor="{{$item->usuario}}"
+                                title="{{$item->assunto}}"
+                                :text="$item->mensagem"
+                                link="{{route('noticias-view', ['id' => $item->id])}}"
+                                data="{{$item->data}}"/>
+                    @endforeach
+                @endempty
             </div>
             <div class="w-100 d-flex justify-content-center mt-5">
                 <div class="link">

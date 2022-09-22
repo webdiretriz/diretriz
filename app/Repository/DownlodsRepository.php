@@ -20,7 +20,7 @@ class DownlodsRepository
             </div>";
         }
 
-        $html = '<div class="alert w-75 alert-info" role="alert">
+        $html = '<div class="alert w-100 alert-info" role="alert">
                         <i class="bi bi-chat-fill me-1"></i>Para fazer o download de algum arquivo, selecione a solução
                         desejada e em seguida, navegue entre os sistemas:
                     </div>

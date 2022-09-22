@@ -19,7 +19,7 @@
         content: '';
         height: 25px;
         width: 25px;
-        z-index: 10;
+        z-index: 1;
         background: map-get($theme-colors, 'primary');
         top: calc(50% - 12.5px);
         right: -14px;

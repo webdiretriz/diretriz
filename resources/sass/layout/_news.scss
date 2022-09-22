@@ -8,7 +8,7 @@
         color: map-get($theme-colors, 'primary');
     }
 
-    .single{
+    .single {
         border: 1px solid #ccc;
         z-index: 1;
         border-radius: 8px;
@@ -16,14 +16,21 @@
         margin: 0 10px;
         background: map-get($theme-colors, 'white');
 
-        img{
+        img {
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
             width: 100%;
             height: 200px;
         }
 
-        .data{
+        .html {
+
+            img {
+                display: none !important;
+            }
+        }
+
+        .data {
             position: absolute;
             display: flex;
             justify-content: center;
@@ -49,14 +56,14 @@
             max-width: 300px;
             margin-top: 20px;
 
-            .title-section{
+            .title-section {
                 font-size: 1.3em !important;
             }
         }
     }
 }
 
-.news:before{
+.news:before {
     content: '';
     bottom: 0;
     right: 0;

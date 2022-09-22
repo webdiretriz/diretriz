@@ -15,10 +15,14 @@ $(document).scroll(function () {
 function ScrollNav(element) {
     $("body").find(element).find('a[id="j_scrollNav"]').on('click', function (event) {
         let target = $(this).attr('href');
-        let top = $(target).offset().top;
-        $("html, body").animate({scrollTop: top - 80}, 500);
-        $(".j_menu").first().trigger('click');
-        $("body").find('.header').stop().toggleClass('active-rwd')
+        if ($("body").find(target).length > 0) {
+            let top = $(target).offset().top;
+            $("html, body").animate({scrollTop: top - 80}, 500);
+            $(".j_menu").first().trigger('click');
+            $("body").find('.header').stop().toggleClass('active-rwd')
+        } else {
+            window.location.href = $("#react-base").attr('href') + target
+        }
         event.preventDefault();
     });
 

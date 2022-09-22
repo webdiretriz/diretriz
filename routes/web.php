@@ -27,3 +27,6 @@ Route::get('/seguranca', [AppController::class, 'seguranca'])->name('seguranca')
 Route::get('/acesso-remoto', [AppController::class, 'acessoRemoto'])->name('acesso-remoto');
 Route::get('/downloads', [AppController::class, 'downloads'])->name('downloads');
 
+//Noticias
+Route::get('/noticias/{id}', [AppController::class, 'noticiasView'])->name('noticias-view');
+
