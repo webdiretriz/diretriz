@@ -1,10 +1,10 @@
-.initial{
+.initial {
     height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden !important;
 
-    .initial-bg{
+    .initial-bg {
         position: absolute;
         left: 0;
         top: 0;
@@ -17,27 +17,27 @@
 
     //992px
     @media (max-width: $xg) {
-        .initial-bg{
+        .initial-bg {
             width: 150%;
         }
     }
 
     //768px
     @media (max-width: $md) {
-        .initial-bg{
+        .initial-bg {
             width: 200%;
         }
     }
 
     //576px
     @media (max-width: $sm) {
-        .initial-bg{
+        .initial-bg {
             width: 300%;
         }
     }
 }
 
-.title-section{
+.title-section {
     font-family: 'Oswald', sans-serif !important;
 
     //768px
@@ -46,13 +46,13 @@
     }
 }
 
-.link{
+.link {
     padding: 1rem;
     background: #e0e0e0;
     border: 2px dashed map-get($theme-colors, 'gray');
 }
 
-.backTop{
+.backTop {
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -64,6 +64,16 @@
     bottom: 20px;
     right: 20px;
     cursor: pointer;
+}
+
+.lgpd {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 @keyframes pulse {
@@ -93,7 +103,7 @@ body::-webkit-scrollbar-thumb {
 //Desing responsivo - GERAL
 //768px
 @media (max-width: $md) {
-    section{
+    section {
         font-size: .9em !important;
     }
 }

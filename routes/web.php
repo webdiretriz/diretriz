@@ -32,3 +32,7 @@ Route::get('/downloads', [AppController::class, 'downloads'])->name('downloads')
 Route::get('/noticias/{id}', [AppController::class, 'noticiasView'])->name('noticias-view');
 Route::get('/noticias-lista/{categoria?}', [AppController::class, 'noticiasList'])->name('noticias-list');
 
+//LGPD
+Route::get('/lgpd/cookies', [AppController::class, 'lgpdCookies'])->name('lgpd.cookies');
+Route::get('/lgpd/politica', [AppController::class, 'lgpdPolitica'])->name('lgpd.politica');
+Route::get('/lgpd/aceitar', [AppController::class, 'lgpdAccept'])->name('lgpd.aceitar');

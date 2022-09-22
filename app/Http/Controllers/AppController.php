@@ -114,4 +114,23 @@ class AppController extends Controller
             'news' => $categoria === 999 ? $this->noticias->findAllBoletim(20) : $this->noticias->findAllNews(6, $categoria)
         ]);
     }
+
+    //Página da LGPD
+    public function lgpdCookies()
+    {
+        return view('pages.lgpd.cookies');
+    }
+
+    //Página da LGPD
+    public function lgpdPolitica()
+    {
+        return view('pages.lgpd.politica');
+    }
+
+    //Aceita os termos da LGPD
+    public function lgpdAccept()
+    {
+        setcookie('cookie_notice_accepted', 'true', time() + 60 * 60 * 24 * 15, '/');
+        return redirect(route('home'));
+    }
 }

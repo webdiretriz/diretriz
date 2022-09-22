@@ -44,8 +44,8 @@
                 <div class="form-check mt-2">
                     <input class="form-check-input" name="lgpd" type="checkbox" value="on" id="lgpd">
                     <label class="form-check-label" for="lgpd">
-                        Declaro que li e estou de acordo com a <a href="" class="link-success">Política de
-                            Privacidade</a> e <a class="link-success" href="">Cookies</a> da Diretriz Informática
+                        Declaro que li e estou de acordo com a <a href="{{route('lgpd.politica')}}" class="link-success">Política de
+                            Privacidade</a> e <a class="link-success" href="{{route('lgpd.cookies')}}">Cookies</a> da Diretriz Informática
                         com relação aos meus dados fornecidos neste formulário.
                     </label>
                 </div>
