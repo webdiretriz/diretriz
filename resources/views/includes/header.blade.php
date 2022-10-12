@@ -37,10 +37,10 @@
                     <li>
                         <a id="j_dropdown" data-dropdown="2" href="#">Área do Cliente</a>
                         <ul id="j_dropdown-link" data-dropdown="2" class="dropdown-link" style="min-width: 210px;">
-                            <li><a href="https://www.diretriz.net/suporte.php/login/index/url/" target="_blank"><i class="fas fa-headset me-1"></i>Suporte</a></li>
+                            <li><a href="https://diretriz.net/suporte/" target="_blank"><i class="fas fa-headset me-1"></i>Suporte</a></li>
                             <li><a href="{{route('acesso-remoto')}}"><i class="fas fa-house-laptop me-1"></i>Conexão remota</a></li>
                             <li><a href="{{route('downloads')}}"><i class="fas fa-download me-1"></i>Downloads</a></li>
-                            <li><a href="https://imaq.diretriz.net/adm_Login/" target="_blank"><i class="fas fa-tv me-1"></i>i.Maq Web (Aquisição)</a></li>
+                            <li><a href="https://imaq.diretriz.net/" target="_blank"><i class="fas fa-tv me-1"></i>i.Maq Web (Aquisição)</a></li>
                         </ul>
                     </li>
                     <li><a data-dropdown="0" id="j_scrollNav" href="#news">Notícias</a></li>
