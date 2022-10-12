@@ -49,14 +49,17 @@ class DownlodsRepository
                 $html .= "<li>{$file}</li>";
 
             //arquivo
-            if (is_array($file) && !is_dir($dir . DIRECTORY_SEPARATOR . $item))
+            if (is_array($file) && !is_dir($dir . DIRECTORY_SEPARATOR . $item)){
+                $link = str_replace('?url=', '', strchr($item, '?url='));
+                $link = substr($link, strlen(env('APP_FTP')) + 1);
                 $html .= "<li data-jstree='" . json_encode(['type' => trim(strchr($file[1], '-', true)) === 'ini' ? 'version' : 'files']) . "'>
-                            <a href='" . $url . DIRECTORY_SEPARATOR . trim(strchr($item, '-', true)) . "'>{$item}</a>
+                            <a href='" . $url . $link . "'>" . strchr($item, '?url=', true) . "</a>
                 </li>";
+            }
 
             //pasta com arquivo ou subpasta
             if (!empty($item) && is_dir($dir . DIRECTORY_SEPARATOR . $key)) {
-                $html .= "<li class='jstree-open'>{$key}<ul>";
+                $html .= "<li>{$key}<ul>";
                 $html .= $this->getStructTree($item, $dir . DIRECTORY_SEPARATOR . $key, $url);
                 $html .= "</ul>
                 </li>";
@@ -84,7 +87,7 @@ class DownlodsRepository
                     if (is_dir($dir . $file))
                         $fileData[$file] = $this->findDirectory($dir . DIRECTORY_SEPARATOR . $file);
                     else
-                        $fileData[] = $file . ' - <span class="fs-8">' . date('d/m/Y H:i:s', filectime($dir . $file)) . '</span>';
+                        $fileData[] = $file . ' - <span class="fs-8">' . date('d/m/Y H:i:s', filectime($dir . $file)) . '</span>?url=' . $dir . $file ;
                 }
                 closedir($ftp);
             }

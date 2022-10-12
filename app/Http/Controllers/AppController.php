@@ -94,7 +94,7 @@ class AppController extends Controller
     public function downloads()
     {
         return view('pages.downloads', [
-            'files' => $this->download->findAll('ftp', url('ftp'))
+            'files' => $this->download->findAll('', url(''))
         ]);
     }
 
