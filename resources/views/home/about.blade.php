@@ -29,7 +29,7 @@
                          right="true"
                          number="06"
                          title="Equipe"
-                         text="A empresa conta com um quadro de aproximadamente 90 colaboradores, que são treinados e capacitados constantemente para fornecer um atendimento cada vez melhor ao cliente.."/>
+                         text="A empresa conta com um quadro de aproximadamente 70 colaboradores, que são treinados e capacitados constantemente para fornecer um atendimento cada vez melhor ao cliente.."/>
             </div>
         </div>
     </section>

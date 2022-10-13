@@ -3,10 +3,6 @@
         <div class="container p-5 service">
             <div class="w-100">
                 <h1 class="title-section">Explore nossos serviços de software</h1>
-                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus expedita
-                    perspiciatis vitae
-                    voluptate. Dolor laboriosam, maiores mollitia odit perferendis porro quas quo ratione vel vitae!
-                    Fuga rem sint soluta?</p>
                 <div class="w-100 d-flex mt-4 flex-wrap">
                     <x-service image="controladoria"
                                title="Controladoria"
