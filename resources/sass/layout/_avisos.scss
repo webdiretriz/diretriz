@@ -40,4 +40,15 @@
         width: 100%;
         border-radius: 10px;
     }
+
+    //Desing Responsivo
+    //1200px
+    @media (max-width: $xg) {
+        width: calc(50% - 40px);
+    }
+
+    //768px
+    @media (max-width: $md) {
+        width: calc(100% - 40px);
+    }
 }
