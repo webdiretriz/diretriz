@@ -36,3 +36,5 @@ Route::get('/noticias-lista/{categoria?}', [AppController::class, 'noticiasList'
 Route::get('/lgpd/cookies', [AppController::class, 'lgpdCookies'])->name('lgpd.cookies');
 Route::get('/lgpd/politica', [AppController::class, 'lgpdPolitica'])->name('lgpd.politica');
 Route::get('/lgpd/aceitar', [AppController::class, 'lgpdAccept'])->name('lgpd.aceitar');
+
+Route::get('/quadro-avisos', [AppController::class, 'quadroAviso'])->name('quadro-aviso');

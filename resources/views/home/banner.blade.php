@@ -6,9 +6,14 @@
             <p  class="fw-bold title text-uppercase text-center">" Direcionar conhecimento e
                 tecnologia para transformar
                 pessoas."</p>
-            <a href="#news"
-               class="btn bg-success position-relative text-uppercase
-                      fs-7 fw-bold px-4 py-2 mt-4 {{$destaque ? 'destaque' : ''}}">Descubra mais</a>
+            <div class='d-flex flex-wrap'>
+                <a href="#news"
+                   class="btn bg-success position-relative text-uppercase
+                      fs-7 fw-bold px-4 py-2 mt-4 {{$destaque ? '' : ''}}">Descubra mais</a>
+                <a href="{{route('quadro-aviso')}}"
+                   class="btn bg-success position-relative text-uppercase
+                      fs-7 fw-bold px-4 ms-4 py-2 mt-4 destaque">Quadro de avisos</a>
+            </div>
         </div>
     </div>
 @endsection

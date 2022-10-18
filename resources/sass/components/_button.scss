@@ -1,0 +1,160 @@
+/**
+  GERAL
+  Configurações gerais do botão
+ */
+.button__zircona{
+    display: flex;
+    position: relative;
+    color: map-get($theme-colors, 'primary');
+    @include transition(.4s);
+    text-decoration: none;
+
+    .border{
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid map-get($theme-colors, 'primary') !important;
+    }
+
+    .icon{
+        z-index: 1;
+    }
+}
+
+.button__zircona::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    border-radius: 50%;
+    @include transition(.4s);
+}
+
+.button__zircona:hover{
+    color: map-get($theme-colors, 'white');
+    @include transition(.4s);
+
+    .border{
+        @include transition(.4s);
+        border: 2px solid transparent !important;
+    }
+}
+
+//cores - warning
+.button__zircona.warning::before{
+    background: map-get($theme-colors, 'warning');
+}
+
+//cores - danger
+.button__zircona.danger::before{
+    background: map-get($theme-colors, 'danger');
+}
+
+//cores - info
+.button__zircona.info::before{
+    background: map-get($theme-colors, 'info');
+}
+
+//cores - success
+.button__zircona.success::before{
+    background: map-get($theme-colors, 'success');
+}
+
+//cores - secondary
+.button__zircona.secondary::before{
+    background: map-get($theme-colors, 'secondary');
+}
+
+/**
+  CIRCULO
+  Estilo com icon
+ */
+.button__zircona.circle{
+
+    .icon,
+    .border{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        min-height: 38px;
+    }
+}
+
+.button__zircona.circle:before{
+    transform: translate(5px, 5px);
+}
+
+.button__zircona.circle:hover{
+    &::before{
+        @include transition(.4s);
+        transform: translate(0, 0);
+    }
+}
+
+/**
+  NORMAL
+  Estilo com texto
+ */
+.button__zircona.normal{
+    display: inline-block;
+
+    &:before,
+    .icon,
+    .border{
+        border-radius: 50px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+    }
+
+    .text{
+        position: relative;
+        z-index: 1;
+        font-weight: bold;
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+.button__zircona.normal:before{
+    transform: translate(10px, 10px);
+}
+
+.button__zircona.normal:hover{
+    &::before{
+        @include transition(.4s);
+        transform: translate(0, 0);
+    }
+}
+
+
+//size - pequeno
+.button__zircona.normal.small{
+    .text{
+        font-size: .8em;
+    }
+}
+
+//size - medium
+.button__zircona.normal.medium{
+    .text{
+        font-size: 1.3em;
+    }
+}
+
+//size - large
+.button__zircona.normal.large{
+    .text{
+        font-size: 1.8em;
+    }
+}

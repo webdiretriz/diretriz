@@ -11,7 +11,7 @@
                            rua="49.051.060 - Rua Manoel Teixeira n° 06 / Bairro Suíssa"
                            mail="contato.se@diretriz.net"
                            phone="(79) 3222-0610 / (79) 3222-0620"/>
-                <x-contact cidade="Raraima"
+                <x-contact cidade="Roraima - RR"
                            mail="contato@diretriz.net"
                            phone="(95) 99165-5115 / (95) 98406-3218"/>
             </div>

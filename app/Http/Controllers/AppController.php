@@ -133,4 +133,12 @@ class AppController extends Controller
         setcookie('cookie_notice_accepted', 'true', time() + 60 * 60 * 24 * 15, '/');
         return redirect(route('home'));
     }
+
+    //Quadro de avisos do site
+    public function quadroAviso()
+    {
+        return view('pages.avisos', [
+            'avisos' => $this->noticias->findAllAvisos()
+        ]);
+    }
 }

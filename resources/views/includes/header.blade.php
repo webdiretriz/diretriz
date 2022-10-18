@@ -24,11 +24,11 @@
                     <li>
                         <a id="j_dropdown" data-dropdown="1" href="#">Soluções</a>
                         <ul id="j_dropdown-link" data-dropdown="1" class="dropdown-link" style="min-width: 305px;">
-                            <li class="text-success mb-2 fs-7">Pública</li>
+                            <li class="text-success mb-2 fs-7">Controladoria</li>
                             <li><a href="{{route('imaq')}}"><i class="fas fa-tv me-1"></i>iMaq</a></li>
                             <li><a href="{{route('legislador')}}"><i class="fas fa-tv me-1"></i>Legislador</a></li>
                             <li><a href="{{route('terra')}}"><i class="fas fa-tv me-1"></i>Terra</a></li>
-                            <li class="text-success my-2 mt-3 fs-7">Empresarial</li>
+                            <li class="text-success my-2 mt-3 fs-7">Gestão RH</li>
                             <li><a href="{{route('gestao-rh')}}"><i class="fas fa-users me-1"></i>HCM (Gestão de Pessoas , RH)</a></li>
                             <li><a href="{{route('seguranca')}}"><i class="fas fa-users me-1"></i>RONDA (Gestão de Acesso e Segurança)</a>
                             </li>

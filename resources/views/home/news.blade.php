@@ -9,7 +9,7 @@
                             autor="{{$boletim[0]->usuario}}"
                             title="{{$boletim[0]->titulo}}"
                             text="Fique por dentro de informações e comunicados importantes para que você que atua na área pública e/ou empresarial"
-                            link="https://www.diretriz.net/imgs/boletim/{{$boletim[0]->arquivo}}"
+                            link="https://www.diretriz.net/boletim/{{$boletim[0]->arquivo}}"
                             data="{{$boletim[0]->data}}"/>
                 @endempty
                 @empty(!$news)

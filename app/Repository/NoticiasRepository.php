@@ -22,7 +22,7 @@ class NoticiasRepository
                 $data->id = $item->codigo;
                 $data->assunto = $item->titulo;
                 $data->capa = url(mix('images/boletim.jpg'));
-                $data->link = 'https://www.diretriz.net/imgs/boletim/' . $item->arquivo;
+                $data->link = 'https://www.diretriz.net/boletim/' . $item->arquivo;
                 $data->usuario = DB::table('admin')->where('id', $item->usuario)
                     ->first()->nome;
                 return $data;
@@ -65,6 +65,17 @@ class NoticiasRepository
             ->join('noticias_categoria', 'noticias_categoria.idcategoria', '=', 'noticias.categoria')
             ->where('id', '=', $id)
             ->first();
+    }
+
+    /**
+     * Pesquisa as ultimas notícias
+     * @return Collection
+     */
+    public function findAllAvisos(): Collection
+    {
+        return DB::table('carrousel')
+            ->where('exibir', '=',  'S')
+            ->get();
     }
 
     /**
