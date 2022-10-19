@@ -59,7 +59,6 @@
                        target="_blank"
                        class='fs-6 ms-0 ms-xl-3 text-success'><i class="bi bi-tv me-1"></i>CRM</a>
                     <div class="ms-0 ms-xl-3">
-                        <p class='fs-6'><i class="bi bi-telephone me-1"></i>Contato</p>
                         <p class='fs-7'>(35) 2105-3105</p>
                     </div>
                 </div>

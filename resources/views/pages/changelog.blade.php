@@ -36,10 +36,6 @@
                                                             ($i->Tipo_Requisito_Orig == 'CE' ? 'gears text-success' :
                                                                 ($i->Tipo_Requisito_Orig == 'IR' ? 'newspaper text-info' : 'code-pull-request'))}}"></i>
                                                     <div class="ms-3">
-                                                        <p><b><i class="fas fa-code-pull-request me-1"></i>Tipo:</b> {{$i->Tipo_Requisito_Orig == 'AD' ? 'Adptativa' :
-                                                            ($i->Tipo_Requisito_Orig == 'CE' ? 'Corretiva' :
-                                                                ($i->Tipo_Requisito_Orig == 'IR' ? 'Perfectiva' : 'Preventiva'))}}
-                                                        </p>
                                                         <p>
                                                             <b><i class="fas fa-headset me-1"></i>Referência:</b> {{$i->LOCAL_REFER_PENDENCIA}}
                                                         </p>
