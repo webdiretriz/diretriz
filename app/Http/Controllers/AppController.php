@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Traits\Response;
+use App\Repository\ChangelogRepository;
 use App\Repository\ContactRepository;
 use App\Repository\DownlodsRepository;
 use App\Repository\NoticiasRepository;
@@ -21,6 +22,9 @@ class AppController extends Controller
     /** @var ContactRepository */
     private $contact;
 
+    /** @var ChangelogRepository */
+    private $changelog;
+
     /**
      * Injeção de dependência
      * @param DownlodsRepository $download
@@ -28,12 +32,14 @@ class AppController extends Controller
     public function __construct(
         DownlodsRepository $download,
         NoticiasRepository $noticias,
-        ContactRepository  $contact
+        ContactRepository  $contact,
+        ChangelogRepository $changelog
     )
     {
         $this->download = $download;
         $this->noticias = $noticias;
         $this->contact = $contact;
+        $this->changelog = $changelog;
     }
 
     //Página home
@@ -84,6 +90,18 @@ class AppController extends Controller
         return view('pages.seguranca');
     }
 
+    //Exibe a página de notas de versão do sistema
+    public function changelog(string $sistema)
+    {
+        $v = $this->changelog->findChangeLog($sistema, isset($_GET['all']));
+        if(empty($v))
+            return redirect(route('home'));
+        return view('pages.changelog', [
+            'sistema' => $sistema,
+            'versao' => $v
+        ]);
+    }
+
     //Página Acesso Remoto
     public function acessoRemoto()
     {
@@ -115,6 +133,14 @@ class AppController extends Controller
         ]);
     }
 
+    //Quadro de avisos do site
+    public function quadroAviso()
+    {
+        return view('pages.avisos', [
+            'avisos' => $this->noticias->findAllAvisos()
+        ]);
+    }
+
     //Página da LGPD
     public function lgpdCookies()
     {
@@ -132,13 +158,5 @@ class AppController extends Controller
     {
         setcookie('cookie_notice_accepted', 'true', time() + 60 * 60 * 24 * 15, '/');
         return redirect(route('home'));
-    }
-
-    //Quadro de avisos do site
-    public function quadroAviso()
-    {
-        return view('pages.avisos', [
-            'avisos' => $this->noticias->findAllAvisos()
-        ]);
     }
 }

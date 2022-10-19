@@ -40,6 +40,7 @@
                             <li><a href="https://diretriz.net/suporte/" target="_blank"><i class="fas fa-headset me-1"></i>Suporte</a></li>
                             <li><a href="{{route('acesso-remoto')}}"><i class="fas fa-house-laptop me-1"></i>Conexão remota</a></li>
                             <li><a href="{{route('downloads')}}"><i class="fas fa-download me-1"></i>Downloads</a></li>
+                            <li><a href="{{route('changelog', ['sistema' => 'i.Maq'])}}"><i class="fas fa-code-branch me-1"></i>Notas de Versão <small>(i.Maq)</small></a></li>
                             <li><a href="https://imaq.diretriz.net/" target="_blank"><i class="fas fa-tv me-1"></i>i.Maq Web (Aquisição)</a></li>
                         </ul>
                     </li>

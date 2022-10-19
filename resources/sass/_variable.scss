@@ -35,6 +35,11 @@ $input-padding-y: 15px;
 $input-focus-border-color: #008a2e;
 $input-focus-box-shadow: none;
 
+$accordion-bg: #fff;
+$accordion-button-active-color: map-get($theme-colors, 'primary');
+$accordion-button-active-bg: #eaeaea;
+$accordion-button-focus-box-shadow: none;
+
 //Container
 $container-max-widths: (
     sm: 100%,
