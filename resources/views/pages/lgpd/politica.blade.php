@@ -214,18 +214,19 @@
                         </li>
                         <li class="mt-4">
                             <span class="font-weight-bold text-primary title-section" style="font-size: 1.5em">10. Encarregado de Proteção de dados</span>
-                            <p class="m-0 mt-2">A <span class="font-weight-bold">DIRETRIZ</span> disponibiliza os
-                                seguintes meios para que você possa entrar em contato conosco para exercer seus direitos
+                            <p class="m-0 mt-2">A <span class="font-weight-bold">DIRETRIZ</span> disponibiliza o
+                                seguinte meio para que você possa entrar em contato conosco para exercer seus direitos
                                 de titular: <a class="font-weight-bold"
                                                href="https://portallgpd.diretriz.net/Autenticacao.aspx" target="_blank">Portal
                                     LGPD - Diretriz</a>.</p>
                             <p class="m-0 mt-2">Caso tenha dúvidas sobre esta Política de Privacidade ou sobre os dados
                                 pessoais que tratamos, você pode entrar em contato com o nosso Encarregado de Proteção
-                                de Dados Pessoais, através dos seguintes canais:</p>
+                                de Dados Pessoais, <b>Marcos Paulo Alves dos Reis</b>, através dos seguintes canais:</p>
                             <p class="fw-bold">dpo@diretriz.net</p>
                         </li>
                     </ul>
-                    <p class="w-100 text-center" style="font-size: 1.1em;">Conheça também a nossa <a class="font-weight-bold" href="{{route('lgpd.cookies')}}">Políticas de Cookies</a></p>
+                    <p class="w-100 text-center" style="font-size: 1.1em;">Conheça também a nossa <a
+                            class="font-weight-bold" href="{{route('lgpd.cookies')}}">Políticas de Cookies</a></p>
                 </article>
             </div>
         </div>
