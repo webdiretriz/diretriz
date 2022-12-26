@@ -24,8 +24,14 @@ class ContactRepository
             'lgpd'  => 'required'
         ]);
         $data['anexo'] = $request->anexo;
+        if ($data['assunto'] == "ouvidoria")
+            $to = "ouvidoria@diretriz.net";
+        if ($data['assunto'] == "contato")
+            $to = "comunicação@diretriz.net";
+        if ($data['assunto'] == "recrutamento")
+            $to = "recrutamento@diretriz.net";
         try {
-            Mail::to("comunicacao@diretriz.net")->send(new Contato($data));
+            Mail::to($to)->send(new Contato($data));
             return 'E-mail enviado com sucesso!';
         } catch (\Exception $exception){
             abort(500, $exception->getMessage());

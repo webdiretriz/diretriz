@@ -30,7 +30,11 @@
                     <div id="j_feedback"></div>
                 </div>
                 <div class="field mt-4">
-                    <input type="text" name="assunto" required class="form-control" placeholder="Assunto">
+                    <select class="form-control" required name="assunto">
+                        <option value="ouvidoria">Ouvidoria</option>
+                        <option value="recrutamento">Recrutamento</option>
+                        <option value="contato">Contato</option>
+                    </select>
                     <div id="j_feedback"></div>
                 </div>
                 <div class="mt-4 w-100">
