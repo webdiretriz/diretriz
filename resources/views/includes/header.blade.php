@@ -46,7 +46,7 @@
                     </li>
                     <li><a data-dropdown="0" id="j_scrollNav" href="#news">Notícias</a></li>
                     <li><a data-dropdown="0" id="j_scrollNav" href="#contact">Contato</a></li>
-                    <li><a data-dropdown="0" id="j_scrollNav" class="text-success" href="#diretriz">A Diretriz</a></li>
+                    <li><a data-dropdown="0" id="j_scrollNav" class="text-success" href="{{route('diretriz')}}">A Diretriz</a></li>
                 </ul>
 
                 {{--Informação--}}
@@ -60,6 +60,10 @@
                        class='fs-6 ms-0 ms-xl-3 text-success'><i class="bi bi-tv me-1"></i>CRM</a>
                     <div class="ms-0 ms-xl-3">
                         <p class='fs-7'>(35) 2105-3105</p>
+                    </div>
+                    <div class="ms-0 ms-xl-3">
+                        <p class='fs-7'>Seg a Sex.</p>
+                        <p class='fs-7'>08:00 às 18:00</p>
                     </div>
                 </div>
             </div>

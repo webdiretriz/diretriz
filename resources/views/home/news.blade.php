@@ -2,7 +2,7 @@
     <section class="bg-white news" id="news">
         <div class="container flex-wrap d-flex justify-content-center p-5">
             <h1 class="title-section">Últimas notícias e artigos</h1>
-            <p class="w-100 text-center title-section fs-5">Fique por dentro das novidades da Deretriz</p>
+            <p class="w-100 text-center title-section fs-5">Fique por dentro das novidades da Diretriz</p>
             <div class="w-100 mt-4 d-flex flex-wrap justify-content-center justify-content-xl-start">
                 @empty(!$boletim)
                     <x-news image="{{url(mix('images/boletim.jpg'))}}"

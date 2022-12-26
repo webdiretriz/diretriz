@@ -60,6 +60,12 @@ class AppController extends Controller
             ->response();
     }
 
+    //Página da diretriz
+    public function diretriz()
+    {
+        return view('pages.diretriz');
+    }
+
     //Página iMaq
     public function imaq()
     {

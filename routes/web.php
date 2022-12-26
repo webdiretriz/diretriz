@@ -16,6 +16,7 @@ use App\Http\Controllers\AppController;
 
 Route::get('/', [AppController::class, 'home'])->name('home');
 Route::post('/contato', [AppController::class, 'contact'])->name('contact');
+Route::get('/diretriz', [AppController::class, 'diretriz'])->name('diretriz');
 
 //Soluções
 Route::get('/imaq', [AppController::class, 'imaq'])->name('imaq');
