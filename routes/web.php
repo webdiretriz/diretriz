@@ -39,3 +39,5 @@ Route::get('/quadro-avisos', [AppController::class, 'quadroAviso'])->name('quadr
 Route::get('/lgpd/cookies', [AppController::class, 'lgpdCookies'])->name('lgpd.cookies');
 Route::get('/lgpd/politica', [AppController::class, 'lgpdPolitica'])->name('lgpd.politica');
 Route::get('/lgpd/aceitar', [AppController::class, 'lgpdAccept'])->name('lgpd.aceitar');
+Route::get('/lgpd/consentimento', [AppController::class, 'lgpdConsentimento'])->name('lgpd.consentimento');
+Route::post('/lgpd/consentimento', [AppController::class, 'lgpdConsentimentoSend'])->name('lgpd.consentimento.send');

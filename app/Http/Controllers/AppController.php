@@ -165,4 +165,17 @@ class AppController extends Controller
         setcookie('cookie_notice_accepted', 'true', time() + 60 * 60 * 24 * 15, '/');
         return redirect(route('home'));
     }
+
+    //Página de consentimento LGPD
+    public function lgpdConsentimento()
+    {
+        return view('pages.lgpd.consentimento');
+    }
+
+    //Recebe informação do formulário consentimento
+    public function lgpdConsentimentoSend(Request $request){
+        return $this->message('success', $this->contact->consentimento($request))
+            ->clear(true)
+            ->response();
+    }
 }

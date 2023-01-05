@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Mail\Consentimento;
 use App\Mail\Contato;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -33,6 +34,25 @@ class ContactRepository
         try {
             Mail::to($to)->send(new Contato($data));
             return 'E-mail enviado com sucesso!';
+        } catch (\Exception $exception){
+            abort(500, $exception->getMessage());
+        }
+    }
+
+    /**
+     * Realiza a gestão de consentimento
+     * @param Request $request
+     * @return string
+     */
+    public function consentimento(Request $request): string
+    {
+        $data = $request->validate([
+            "nome" => 'required',
+            "email" => 'required|email'
+        ]);
+        try {
+            Mail::to("luizfernando.paula@diretriz.net")->send(new Consentimento($data));
+            return 'Recebemos sua autorização! Obrigado por entrar em contato conosco.';
         } catch (\Exception $exception){
             abort(500, $exception->getMessage());
         }
