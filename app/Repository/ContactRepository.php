@@ -51,7 +51,7 @@ class ContactRepository
             "email" => 'required|email'
         ]);
         try {
-            Mail::to("luizfernando.paula@diretriz.net")->send(new Consentimento($data));
+            Mail::to("recrutamento@diretriz.net")->send(new Consentimento($data));
             return 'Recebemos sua autorização! Obrigado por entrar em contato conosco.';
         } catch (\Exception $exception){
             abort(500, $exception->getMessage());
